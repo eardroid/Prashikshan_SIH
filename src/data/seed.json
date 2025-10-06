@@ -1,0 +1,259 @@
+{
+  "users": [
+    {
+      "id": "usr_001",
+      "email": "student@university.edu",
+      "role": "student",
+      "name": "Priya Sharma",
+      "institution": "IIT Delhi",
+      "readinessScore": 78,
+      "completedCourses": 12,
+      "activeCourses": 3,
+      "walletBalance": 15000
+    },
+    {
+      "id": "usr_002",
+      "email": "faculty@university.edu",
+      "role": "faculty",
+      "name": "Dr. Rajesh Kumar",
+      "institution": "IIT Delhi",
+      "studentsSupervised": 45,
+      "pendingApprovals": 8
+    },
+    {
+      "id": "usr_003",
+      "email": "hr@techcorp.com",
+      "role": "industry",
+      "name": "Anita Desai",
+      "company": "TechCorp Solutions",
+      "activePostings": 5,
+      "applicantsReceived": 127
+    }
+  ],
+  "courses": [
+    {
+      "id": "crs_001",
+      "title": "Professional Email Etiquette",
+      "duration": "2 hrs",
+      "badge": "Communication Pro",
+      "tasks": 8,
+      "completionRate": 85,
+      "category": "soft-skills",
+      "description": "Master professional communication in workplace settings"
+    },
+    {
+      "id": "crs_002",
+      "title": "Resume Building Masterclass",
+      "duration": "3 hrs",
+      "badge": "Resume Expert",
+      "tasks": 12,
+      "completionRate": 92,
+      "category": "career-prep",
+      "description": "Create ATS-friendly resumes that get noticed"
+    },
+    {
+      "id": "crs_003",
+      "title": "Excel for Business Analytics",
+      "duration": "5 hrs",
+      "badge": "Data Analyst",
+      "tasks": 15,
+      "completionRate": 67,
+      "category": "technical",
+      "description": "Advanced Excel techniques for data analysis"
+    },
+    {
+      "id": "crs_004",
+      "title": "Interview Preparation",
+      "duration": "4 hrs",
+      "badge": "Interview Ready",
+      "tasks": 10,
+      "completionRate": 78,
+      "category": "career-prep",
+      "description": "Ace your technical and behavioral interviews"
+    },
+    {
+      "id": "crs_005",
+      "title": "Time Management & Productivity",
+      "duration": "2.5 hrs",
+      "badge": "Productivity Master",
+      "tasks": 7,
+      "completionRate": 88,
+      "category": "soft-skills",
+      "description": "Optimize your workflow and boost efficiency"
+    },
+    {
+      "id": "crs_006",
+      "title": "Python Fundamentals",
+      "duration": "8 hrs",
+      "badge": "Python Developer",
+      "tasks": 20,
+      "completionRate": 54,
+      "category": "technical",
+      "description": "Learn programming basics with Python"
+    }
+  ],
+  "sosCases": [
+    {
+      "id": "PRS-SOS-2025-0847",
+      "severity": "ORANGE",
+      "title": "Unpaid stipend for 2 months",
+      "description": "Company has not paid stipend despite completed milestones",
+      "status": "under_review",
+      "createdAt": "2025-10-01T10:30:00Z",
+      "sla": "24h response",
+      "assignedTo": "triage_team_02",
+      "anonymous": false,
+      "evidence": ["invoice_001.pdf", "email_thread.pdf"],
+      "geoTag": "28.6139° N, 77.2090° E"
+    },
+    {
+      "id": "PRS-SOS-2025-0848",
+      "severity": "RED",
+      "title": "Harassment at workplace",
+      "description": "Immediate assistance required",
+      "status": "escalated",
+      "createdAt": "2025-10-02T14:15:00Z",
+      "sla": "Immediate - phone call initiated",
+      "assignedTo": "emergency_response",
+      "anonymous": true,
+      "evidence": ["audio_001.m4a"],
+      "geoTag": null
+    },
+    {
+      "id": "PRS-SOS-2025-0849",
+      "severity": "GREEN",
+      "title": "Clarification on certificate format",
+      "description": "Need information about NEP-compliant certificate requirements",
+      "status": "pending",
+      "createdAt": "2025-10-03T09:00:00Z",
+      "sla": "72h response",
+      "assignedTo": "support_team",
+      "anonymous": false,
+      "evidence": [],
+      "geoTag": null
+    }
+  ],
+  "analytics": {
+    "website": {
+      "visitors": 125847,
+      "signups": {
+        "student": 8542,
+        "faculty": 1247,
+        "industry": 523,
+        "government": 89
+      },
+      "conversionRate": 6.8,
+      "courseStarts": 5821,
+      "applications": 3456,
+      "avgSessionDuration": "8m 34s",
+      "bounceRate": 32.5
+    },
+    "stakeholder": {
+      "colleges": {
+        "totalInstitutions": 247,
+        "activeStudents": 8542,
+        "completionRate": 73.2,
+        "avgReadiness": 76.5,
+        "stipendsDisbursed": 12450000,
+        "sosCount": 23
+      },
+      "industry": {
+        "totalCompanies": 523,
+        "activePostings": 1247,
+        "applicationsReceived": 15678,
+        "hiresCompleted": 2341,
+        "stipendAccuracy": 94.7,
+        "avgTimeToHire": "18 days"
+      },
+      "government": {
+        "statesCovered": 28,
+        "districtsCovered": 156,
+        "ruralReach": 34.2,
+        "virtualInternships": 2847,
+        "totalBeneficiaries": 8542
+      }
+    }
+  },
+  "certificates": [
+    {
+      "id": "cert_001",
+      "studentId": "usr_001",
+      "internshipTitle": "Software Development Intern",
+      "company": "TechCorp Solutions",
+      "duration": "6 months",
+      "workLogsCount": 124,
+      "verificationHash": "0x9f4a8c7e2d1b5f3a8c9e4d7b2a5f8c1e3d6b9a4c7e2f5a8b1d4c7e9f2a5b8c1d",
+      "qrCode": "QR_CERT_001",
+      "issuedAt": "2025-09-15T00:00:00Z",
+      "nepCompliant": true
+    }
+  ],
+  "internships": [
+    {
+      "id": "int_001",
+      "title": "Full Stack Development Intern",
+      "company": "TechCorp Solutions",
+      "location": "Bangalore",
+      "type": "in-person",
+      "duration": "6 months",
+      "stipend": 25000,
+      "skills": ["React", "Node.js", "MongoDB"],
+      "applicants": 89,
+      "status": "open",
+      "postedAt": "2025-09-20T00:00:00Z"
+    },
+    {
+      "id": "int_002",
+      "title": "Data Science Intern",
+      "company": "Analytics Pro",
+      "location": "Mumbai",
+      "type": "in-person",
+      "duration": "4 months",
+      "stipend": 20000,
+      "skills": ["Python", "Machine Learning", "SQL"],
+      "applicants": 124,
+      "status": "open",
+      "postedAt": "2025-09-18T00:00:00Z"
+    },
+    {
+      "id": "int_003",
+      "title": "UI/UX Design Intern",
+      "company": "DesignHub",
+      "location": "Remote",
+      "type": "virtual",
+      "duration": "3 months",
+      "stipend": 15000,
+      "skills": ["Figma", "Adobe XD", "Prototyping"],
+      "applicants": 67,
+      "status": "open",
+      "postedAt": "2025-09-25T00:00:00Z"
+    },
+    {
+      "id": "int_004",
+      "title": "Content Writing Intern",
+      "company": "MediaCorp",
+      "location": "Remote",
+      "type": "virtual",
+      "duration": "2 months",
+      "stipend": 12000,
+      "skills": ["Content Writing", "SEO", "Research"],
+      "applicants": 45,
+      "status": "open",
+      "postedAt": "2025-09-28T00:00:00Z"
+    }
+  ],
+  "aiMentorResponses": [
+    {
+      "trigger": "review my email",
+      "response": "I've analyzed your email. Here are suggestions:\n\n✓ Professional tone maintained\n✓ Clear subject line\n⚠️ Consider adding a call-to-action\n⚠️ Proofread for minor typos\n\nOverall score: 8.5/10"
+    },
+    {
+      "trigger": "suggest portfolio items",
+      "response": "Based on your profile, I recommend:\n\n1. GitHub repository showcasing your React projects\n2. Case study of your internship work\n3. Technical blog posts on Medium\n4. Contributions to open-source projects\n5. Certifications in cloud technologies"
+    },
+    {
+      "trigger": "score my mock answer",
+      "response": "Mock Interview Answer Analysis:\n\n✓ Clear structure (STAR method)\n✓ Relevant technical details\n✓ Quantified impact\n⚠️ Could be more concise\n⚠️ Add more about team collaboration\n\nScore: 7.5/10\nEstimated interview readiness: 78%"
+    }
+  ]
+}

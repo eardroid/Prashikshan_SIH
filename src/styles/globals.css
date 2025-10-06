@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ease-premium: cubic-bezier(0.22, 0.9, 0.35, 1);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    font-optical-sizing: auto;
+    cursor: url('https://raw.githubusercontent.com/atisawd/boxicons/master/static/icon-sets/svg/solid/bxs-pointer.svg') 0 0, auto;
+  }
+
+  a,
+  button {
+    cursor: url('https://raw.githubusercontent.com/atisawd/boxicons/master/static/icon-sets/svg/solid/bxs-hand-up.svg') 6 0, pointer;
+  }
+
+  html.low-data body {
+    background-image: none !important;
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+  }
+
+  html.low-data .glass {
+    background: rgba(15, 23, 42, 0.92) !important;
+    border-color: rgba(148, 163, 184, 0.2) !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+  }
+
+  html.low-data .hero-globe {
+    opacity: 1 !important;
+  }
+
+  html.low-data .animate-ping,
+  html.low-data [class*='shadow-neon'],
+  html.low-data [class*='hover:shadow-neon-hover'] {
+    display: none !important;
+  }
+
+  html.low-data .btn-primary,
+  html.low-data .btn-secondary {
+    background-image: none !important;
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+    box-shadow: none !important;
+  }
+
+  html.low-data [class*='bg-gradient-'],
+  html.low-data [class*='from-'],
+  html.low-data [class*='to-'] {
+    background-image: none !important;
+    background-color: inherit !important;
+  }
+
+  html.low-data .heading-display,
+  html.low-data h1,
+  html.low-data h2,
+  html.low-data h3 {
+    text-shadow: none !important;
+  }
+
+  html.low-data [data-low-visual="hide"] {
+    display: none !important;
+  }
+
+  html.low-data img[data-critical="false"],
+  html.low-data video,
+  html.low-data canvas:not([data-keep]) {
+    filter: grayscale(25%);
+  }
+
+  html.low-data * {
+    transition: none !important;
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  html.low-data .card,
+  html.low-data .glass,
+  html.low-data .rounded-2xl {
+    border-radius: 12px !important;
+  }
+
+  html.low-data .grid {
+    gap: clamp(0.5rem, 2vw, 1rem) !important;
+  }
+
+  html.low-data section,
+  html.low-data footer,
+  html.low-data header {
+    background: #0f172a !important;
+    border: none !important;
+  }
+
+  html.low-data .card-3d,
+  html.low-data .rounded-xl,
+  html.low-data .rounded-2xl,
+  html.low-data .rounded-3xl {
+    background: #111827 !important;
+    border: 1px solid #1f2937 !important;
+  }
+
+  html.low-data .text-gradient,
+  html.low-data .heading-display,
+  html.low-data .heading-lg,
+  html.low-data .heading-md {
+    background: none !important;
+    -webkit-text-fill-color: inherit !important;
+  }
+
+  * {
+    caret-color: #00d4ff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3.5 rounded-xl font-semibold text-base
+           bg-gradient-to-r from-neon-blue to-primary-500
+           hover:shadow-neon-hover hover:scale-[1.03]
+           active:scale-[0.98]
+           transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-neon-blue/50 focus:ring-offset-2 focus:ring-offset-slate-950;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3.5 rounded-xl font-semibold text-base
+           glass glass-hover
+           hover:shadow-glass
+           active:scale-[0.98]
+           transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-slate-950;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg
+           bg-white/5 border border-white/10
+           text-slate-100 placeholder:text-slate-500
+           focus:bg-white/10 focus:border-neon-blue/50 focus:ring-2 focus:ring-neon-blue/20
+           transition-all duration-200
+           outline-none;
+  }
+
+  .card-3d {
+    @apply glass rounded-2xl p-6
+           transition-all duration-300
+           hover:scale-[1.03] hover:shadow-glass;
+    transform-style: preserve-3d;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-blue via-primary-400 to-neon-purple;
+  }
+
+  .heading-display {
+    @apply text-display-lg font-bold tracking-tight text-white;
+  }
+
+  .heading-xl {
+    @apply text-5xl md:text-6xl font-bold tracking-tight text-white;
+  }
+
+  .heading-lg {
+    @apply text-4xl md:text-5xl font-bold tracking-tight text-white;
+  }
+
+  .heading-md {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-white;
+  }
+
+  .heading-sm {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight text-white;
+  }
+
+  .body-lg {
+    @apply text-lg md:text-xl text-slate-300 leading-relaxed;
+  }
+
+  .body-md {
+    @apply text-base md:text-lg text-slate-300 leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}
+
+/* Selection */
+::selection {
+  @apply bg-neon-blue/30 text-white;
+}
+
+/* Focus visible */
+:focus-visible {
+  @apply outline-none ring-2 ring-neon-blue/50 ring-offset-2 ring-offset-slate-950;
+}
